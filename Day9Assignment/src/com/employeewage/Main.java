@@ -1,9 +1,9 @@
-package com.company;
+package com.employeewage;
 
 public class Main {
 
     public static void main(String[] args) {
-        
+
         System.out.println("Welcome to Employee Wage Computation Program");
 
         EmployeeWage cms = new EmployeeWage("CMS",40,8,4,26,150);
