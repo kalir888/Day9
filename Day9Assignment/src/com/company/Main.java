@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.Random;
-import java.util.zip.DataFormatException;
 
 public class Main {
 
