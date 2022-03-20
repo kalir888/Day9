@@ -1,14 +1,24 @@
-package com.company;
+package com.employeewage;
 
 import java.util.Random;
 
 public class EmployeeWage {
-    private final int WAGE_PER_HOUR = 20;
-    private final int FULL_DAY_HOUR = 8;
-    private final int PART_DAY_HOUR = 4;
-    private final int MAX_WORK_DAYS = 20;
-    private final int MAX_WORK_HOURS = 100;
+    public final String companyName;
+    private final int WAGE_PER_HOUR;
+    private final int FULL_DAY_HOUR;
+    private final int PART_DAY_HOUR;
+    private final int MAX_WORK_DAYS;
+    private final int MAX_WORK_HOURS;
     private static int empWagePerMonth;
+
+    public EmployeeWage(String companyName,int WAGE_PER_HOUR,int FULL_DAY_HOUR,int PART_DAY_HOUR,int MAX_WORK_DAYS,int MAX_WORK_HOURS){
+        this.companyName = companyName;
+        this.WAGE_PER_HOUR = WAGE_PER_HOUR;
+        this.FULL_DAY_HOUR = FULL_DAY_HOUR;
+        this.PART_DAY_HOUR = PART_DAY_HOUR;
+        this.MAX_WORK_DAYS = MAX_WORK_DAYS;
+        this.MAX_WORK_HOURS = MAX_WORK_HOURS;
+    }
 
     public int calculate(){
         final int IS_FULL_TIME = 1;
@@ -41,4 +51,5 @@ public class EmployeeWage {
         empWagePerMonth = empHoursPerMonth * WAGE_PER_HOUR;
         return empWagePerMonth;
     }
+
 }
