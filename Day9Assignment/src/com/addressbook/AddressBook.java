@@ -9,7 +9,7 @@ public class AddressBook {
         contactList.add(contact);
     }
 
-    public ArrayList getContactList(){
+    public ArrayList getContactList() {
         return contactList;
     }
 }

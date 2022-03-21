@@ -9,4 +9,22 @@ public class Contact {
     long pinCode;
     long phoneNumber;
     String emailId;
+
+    public Contact(String name){
+        firstName = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", pinCode=" + pinCode +
+                ", phoneNumber=" + phoneNumber +
+                ", emailId='" + emailId + '\'' +
+                '}';
+    }
 }
