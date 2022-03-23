@@ -1,9 +1,10 @@
 package com.addressbook;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddressBook {
-    private ArrayList<Contact> contactList = new ArrayList<>();
+    private List<Contact> contactList = new ArrayList<>();
 
     public void add(Contact contact) {
         contactList.add(contact);
@@ -25,8 +26,11 @@ public class AddressBook {
         }
     }
 
+    public void remove(String name){
+        contactList.removeIf(contact -> name == contact.firstName);
+    }
 
-    public ArrayList getContactList() {
+    public List getContactList() {
         return contactList;
     }
 }

@@ -1,5 +1,7 @@
 package com.addressbook;
 
+import java.util.Objects;
+
 public class Contact {
     public String firstName;
     public String lastName;
@@ -15,6 +17,21 @@ public class Contact {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Contact contact = (Contact) o;
+        return phoneNumber == contact.phoneNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(phoneNumber);
+    }
+
+    @Override
     public String toString() {
         return "Contact{" +
                 "firstName='" + firstName + '\'' +
@@ -26,5 +43,7 @@ public class Contact {
                 ", phoneNumber=" + phoneNumber +
                 ", emailId='" + emailId + '\'' +
                 '}';
+
+
     }
 }

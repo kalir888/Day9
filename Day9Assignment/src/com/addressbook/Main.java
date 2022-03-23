@@ -1,6 +1,7 @@
 package com.addressbook;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String args[]) {
@@ -32,7 +33,7 @@ public class Main {
 
 
         UserInterface userInterface = new UserInterface();
-        ArrayList contactList = addressBook.getContactList();
+        List contactList = addressBook.getContactList();
         System.out.println("printing before editing the contact list");
         userInterface.print(contactList);
 
@@ -40,6 +41,10 @@ public class Main {
                 "25, Bharathiyar 4th street, S.s.colony", "Madurai", "Tamilnadu",
                 "rskgeethastores@gmail.com", 9790295762L, 625016);
         System.out.println("printing after editing the contact list");
+        userInterface.print(contactList);
+
+        addressBook.remove("Geetha");
+        System.out.println("printing contact list after removing contact geetha");
         userInterface.print(contactList);
     }
 }
