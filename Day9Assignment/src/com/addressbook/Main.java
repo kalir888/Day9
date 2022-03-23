@@ -1,5 +1,7 @@
 package com.addressbook;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String args[]) {
 
@@ -22,13 +24,22 @@ public class Main {
         contact2.state = "Tamilnadu";
         contact2.pinCode = 625016;
         contact2.phoneNumber = 9345667724L;
-        contact1.emailId = "rskgeethastores@gmail.com";
+        contact2.emailId = "rskgeethastores@gmail.com";
 
         AddressBook addressBook = new AddressBook();
         addressBook.add(contact1);
         addressBook.add(contact2);
 
+
         UserInterface userInterface = new UserInterface();
-        userInterface.print(addressBook.getContactList());
+        ArrayList contactList = addressBook.getContactList();
+        System.out.println("printing before editing the contact list");
+        userInterface.print(contactList);
+
+        addressBook.edit("Kalimuthu","Ramachandran", "Rengasamy",
+                "25, Bharathiyar 4th street, S.s.colony", "Madurai", "Tamilnadu",
+                "rskgeethastores@gmail.com", 9790295762L, 625016);
+        System.out.println("printing after editing the contact list");
+        userInterface.print(contactList);
     }
 }

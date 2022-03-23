@@ -1,16 +1,16 @@
 package com.addressbook;
 
 public class Contact {
-    String firstName;
-    String lastName;
-    String address;
-    String city;
-    String state;
-    long pinCode;
-    long phoneNumber;
-    String emailId;
+    public String firstName;
+    public String lastName;
+    public String address;
+    public String city;
+    public String state;
+    public long pinCode;
+    public long phoneNumber;
+    public String emailId;
 
-    public Contact(String name){
+    public Contact(String name) {
         firstName = name;
     }
 
